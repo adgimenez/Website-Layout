@@ -16,29 +16,20 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="/img/personal/logo-blanco.png" alt="Logo" />
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="nosotros.html">¿Quienes Somos?</a>
-          </li>
-          <li>
-            <a href="episodios.html">Episodios</a>
-          </li>
-          <li>
-            <a href="novedades.html">Publicidad</a>
-          </li>
-          <li>
-            <a href="galeria.html">¿Querés ser parte?</a>
-          </li>
-          <li>
-            <a href="contacto.html">Contacto</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="h-mobile desktop"><div>
+        <img class="logo" src="/img/personal/logo-blanco.png" alt="Logo" /></div>
+        <button class="menu-toggle" id="menu-btn">&#9776;</button>
+
+        <nav class="menu" id="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quien-somos.html">¿Quienes Somos?</a></li>
+            <li><a href="episodios.html">Episodios</a></li>
+            <li><a href="galeria.html">¿Querés ser parte?</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -66,5 +57,20 @@
     <footer>
       <p>Diseñado por Alejandro Gimenez Curso UTN 2025</p>
     </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+
+      // Opcional: cerrar el menú al hacer clic en un link
+      document.querySelectorAll(".menu a").forEach((link) =>
+        link.addEventListener("click", () => {
+          menu.classList.remove("active");
+        })
+      );
+    </script>
   </body>
 </html>

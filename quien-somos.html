@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/quien-somos.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sin Filtros Project - Tú Podcast</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="h-mobile desktop">
+        <div>
+          <img class="logo" src="/img/personal/logo-blanco.png" alt="Logo" />
+        </div>
+        <button class="menu-toggle" id="menu-btn">&#9776;</button>
+
+        <nav class="menu" id="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quien-somos.html">¿Quienes Somos?</a></li>
+            <li><a href="episodios.html">Episodios</a></li>
+            <li><a href="galeria.html">¿Querés ser parte?</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="nosotros-section">
+        <h1>Este es el equipo qué nos representa</h1>
+        <div class="layout-nosotros">
+          <div class="main-data">
+            <p>
+              En <strong>SinFiltros-Project</strong> creemos en el poder de las
+              conversaciones reales. Nuestro equipo está formado por personas
+              apasionadas, con historias y visiones distintas, pero con un
+              objetivo en común: generar un espacio donde la autenticidad y la
+              conexión humana estén al frente. <br /><br />
+              Desde la producción hasta la voz que escuchás, cada miembro aporta
+              su esencia para que cada episodio sea una experiencia genuina y
+              sin filtros.
+            </p>
+          </div>
+          <div class="equipo">
+            <!-- Persona 1 -->
+            <div class="persona">
+              <img src="img/nosotros/nosotros1.jpg" alt="Alejandro" />
+              <h4>Ale Gimenez</h4>
+              <h7>Host</h7>
+              <button class="btn" onclick="toggleDescripcion('desc1', this)">
+                Ver más
+              </button>
+              <div class="descripcion" id="desc1">
+                <p>
+                  Alejandro: Fundador y voz principal del proyecto. Apasionado
+                  por la comunicación honesta y las historias reales.
+                </p>
+              </div>
+            </div>
+
+            <!-- Persona 2 -->
+            <div class="persona">
+              <img src="img/nosotros/nosotros2.jpg" alt="Persona 2" />
+              <h4>Lucia Perez</h4>
+              <h7>Host</h7>
+              <button class="btn" onclick="toggleDescripcion('desc2', this)">
+                Ver más
+              </button>
+              <div class="descripcion" id="desc2">
+                <p>
+                  Lucía: Productora del podcast, se encarga de que cada episodio
+                  tenga calidad y ritmo. Creativa y empática.
+                </p>
+              </div>
+            </div>
+
+            <!-- Persona 3 -->
+            <div class="persona">
+              <img src="img/nosotros/nosotros3.jpg" alt="Persona 3" />
+              <h4>Juan Perez</h4>
+              <h7> Productor</h7>
+              <button class="btn" onclick="toggleDescripcion('desc3', this)">
+                Ver más
+              </button>
+              <div class="descripcion" id="desc3">
+                <p>
+                  Marco: Editor y técnico de sonido. Le da vida a cada grabación
+                  con su magia detrás del micrófono.
+                </p>
+              </div>
+            </div>
+
+            <!-- Persona 4 -->
+            <div class="persona">
+              <img src="img/nosotros/nosotros4.jpg" alt="Persona 4" />
+              <h4>Luz Perez</h4>
+              <h7>Audiovisual</h7>
+              <button class="btn" onclick="toggleDescripcion('desc4', this)">
+                Ver más
+              </button>
+              <div class="descripcion" id="desc4">
+                <p>
+                  Sofía: Estratega digital. Maneja redes y asegura que el
+                  mensaje llegue a más personas cada semana.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Diseñado por Alejandro Gimenez Curso UTN 2025</p>
+    </footer>
+    <script>
+      function toggleDescripcion(id, btn) {
+        const desc = document.getElementById(id);
+        if (desc.style.display === "none" || desc.style.display === "") {
+          desc.style.display = "block";
+          btn.textContent = "Ocultar";
+        } else {
+          desc.style.display = "none";
+          btn.textContent = "Ver más";
+        }
+      }
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+
+      // Opcional: cerrar el menú al hacer clic en un link
+      document.querySelectorAll(".menu a").forEach((link) =>
+        link.addEventListener("click", () => {
+          menu.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>
