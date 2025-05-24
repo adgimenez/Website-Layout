@@ -1,216 +1,109 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html,
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url("/img/personal/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  font-family: sans-serif;
-  color: white;
-}
-/* Nav */
-.logo {
-  display: flex;
-  width: 180px;
-  height: auto;
 }
 
-.h-mobile {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-nav {
-  background-color: rgba(243, 244, 246, 0.4);
-  color: white;
-  font-weight: bold;
-  border-radius: 9999px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  margin-right: 2rem;
-  padding: 0.5rem 1rem;
-}
-/* Botón hamburguesa */
-.menu-toggle {
-  display: none;
-  font-size: 2.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Estilo del menú oculto por defecto */
-.menu {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* Lista en nav */
-nav ul {
-  display: flex;
-  gap: 0;
-  padding: 0.5rem;
-  list-style: none;
-}
-
-/* Links */
-nav ul li a {
-  display: block;
-  padding: 0.3rem 1rem;
-  border-radius: 9999px;
-  color: inherit;
-  text-decoration: none;
-  transition-property: background-color;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  cursor: pointer;
-}
-
-/* Hover efecto */
-nav ul li a:hover {
-  background-color: rgba(209, 213, 219, 0.3);
-  transition-duration: 700ms;
-}
-/* Main */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   flex: 1;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-align: left;
-  width: 100%;
-  margin: auto;
+}
+.home-hero {
+  padding: 2rem 2em;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Contenedor negro semi transparente */
-main > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.home-hero .title {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
 
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 3rem;
-  max-width: 90rem;
-  color: white;
-  padding: 1rem;
+.home-hero .main {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.6;
+
+  margin-bottom: 1rem;
 }
-div > .title {
-  font-size: 3.6rem;
-  font-weight: 700;
-  margin-bottom: 3.5rem;
-  color: white;
-}
-/* Párrafo */
-.main {
-  color: white;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-size: 1.5rem;
+.podcast-cta {
+  margin-top: 2rem;
 }
 .btn {
   display: inline-block;
-  margin: 2rem;
-  padding: 0.75rem 2rem;
-  background-color: #ffffff22;
-  color: white;
-  font-weight: bold;
-  border: 2px solid white;
-  border-radius: 999px;
+  background-color: #ffffff;
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
   text-decoration: none;
-  transition: 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .btn:hover {
-  background-color: #ffffff44;
-  transform: scale(1.05);
+  background-color: #ddd;
+  color: #000;
 }
-.podcast-cta {
-  text-align: right;
-}
-
-/* Footer */
-footer {
-  text-align: right;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 0.5rem 0;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-}
-footer p {
-  margin-right: 2rem;
+.programacion {
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  text-align: center;
+  color: #fff;
+  max-width: 1100px;
 }
 
-@media (max-width: 1017px) {
-  /* Responsive Header, lo que me llevo hacer esto, no tenes una idea jaja*/
-  header {
-    padding: 0;
-  }
-  .h-mobile {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+.programacion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-  .menu-toggle {
-    display: block;
-    margin: 1rem;
-  }
+.programacion .descripcion {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #ddd;
+}
 
-  nav.menu {
-    display: none;
-    width: 100%;
-    border-radius: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+.grid-programa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
 
-  nav.menu.active {
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
+.programa {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  nav.menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
+.programa img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #fff;
+}
 
-  nav.menu ul li {
-    width: 100%;
-    text-align: center;
-  }
+.programa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
 
-  nav.menu ul li a {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    border-top: 2px solid rgba(255, 9, 9, 0.7);
-    border-bottom: 2px solid rgba(255, 9, 9, 0.7);
-    border-radius: 0;
-  }
-  /* Termino el estilo del header */
-  footer {
-    justify-content: center;
-  }
-  html,
-  body {
-    background-color: black;
-    background-image: none;
-  }
+.programa h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.programa p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }

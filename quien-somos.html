@@ -5,17 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/quien-somos.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/components.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <script
+    src="https://kit.fontawesome.com/b5b3f49780.js"
+    crossorigin="anonymous"
+  ></script>
     <title>Sin Filtros Project - Tú Podcast</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body>
     <header>
+      <div class="redes-sociales-header">
+        <a
+          href="https://www.tiktok.com/@alesinfilros"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i
+            class="fa-brands fa-tiktok"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@SinFiltros-Project"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <i
+            class="fa-brands fa-youtube"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+        <a
+          href="https://www.instagram.com/auditore.ale"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i
+            class="fa-brands fa-instagram"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+        <a
+          href="https://www.twitch.tv/alesinfiltros"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitch"
+        >
+          <i
+            class="fa-brands fa-twitch"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+      </div>
       <div class="h-mobile desktop">
         <div>
           <img class="logo" src="/img/personal/logo-blanco.png" alt="Logo" />
@@ -27,7 +79,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="quien-somos.html">¿Quienes Somos?</a></li>
             <li><a href="episodios.html">Episodios</a></li>
-            <li><a href="galeria.html">¿Querés ser parte?</a></li>
+            <li><a href="ser-parte.html">¿Querés ser parte?</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
@@ -35,26 +87,25 @@
     </header>
     <main>
       <section class="nosotros-section">
-        <h1>Este es el equipo qué nos representa</h1>
+        <div class="nosotros-header">
+          <h1>No sabíamos qué hacer... así que hicimos un podcast</h1>
+          <p class="subtitle">Y acá estamos, hablándote como si esto fuera terapia grupal.</p>
+        </div>
         <div class="layout-nosotros">
           <div class="main-data">
             <p>
-              En <strong>SinFiltros-Project</strong> creemos en el poder de las
-              conversaciones reales. Nuestro equipo está formado por personas
-              apasionadas, con historias y visiones distintas, pero con un
-              objetivo en común: generar un espacio donde la autenticidad y la
-              conexión humana estén al frente. <br /><br />
-              Desde la producción hasta la voz que escuchás, cada miembro aporta
-              su esencia para que cada episodio sea una experiencia genuina y
-              sin filtros.
+              Nadie nos pidió que hiciéramos esto. Pero acá estamos: un grupo de personas con opiniones, micrófonos y demasiado tiempo libre. Y no, no vivimos del aire (todavía). Esto sigue en pie gracias a nuestros trabajos esclavizantes —aunque soñamos con que, si comparten, se ríen y lloran con nosotros, algún día también nos dé de comer.
+              <br /><br />
+              Cada uno trae su estilo, su voz y sus traumas sin resolver. Lo que sí: genuinos somos. Y no, no nos pagaron por decir eso.
             </p>
           </div>
+          
           <div class="equipo">
             <!-- Persona 1 -->
             <div class="persona">
               <img src="img/nosotros/nosotros1.jpg" alt="Alejandro" />
               <h4>Ale Gimenez</h4>
-              <h7>Host</h7>
+              <h5>Host</h5>
               <button class="btn" onclick="toggleDescripcion('desc1', this)">
                 Ver más
               </button>
@@ -70,7 +121,7 @@
             <div class="persona">
               <img src="img/nosotros/nosotros2.jpg" alt="Persona 2" />
               <h4>Lucia Perez</h4>
-              <h7>Host</h7>
+              <h5>Host</h5>
               <button class="btn" onclick="toggleDescripcion('desc2', this)">
                 Ver más
               </button>
@@ -86,7 +137,7 @@
             <div class="persona">
               <img src="img/nosotros/nosotros3.jpg" alt="Persona 3" />
               <h4>Juan Perez</h4>
-              <h7> Productor</h7>
+              <h5> Productor</h5>
               <button class="btn" onclick="toggleDescripcion('desc3', this)">
                 Ver más
               </button>
@@ -102,7 +153,7 @@
             <div class="persona">
               <img src="img/nosotros/nosotros4.jpg" alt="Persona 4" />
               <h4>Luz Perez</h4>
-              <h7>Audiovisual</h7>
+              <h5>Audiovisual</h5>
               <button class="btn" onclick="toggleDescripcion('desc4', this)">
                 Ver más
               </button>
