@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("/img/personal/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: sans-serif;
+    color: white;
+    position: relative;
+    z-index: 0;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Sombra oscura */
+    z-index: -1;
+  }
+  .redes-sociales-header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem; 
+    margin: 1rem 3rem 0 0;
+  }
+  
+  .redes-sociales-header a:hover {
+    filter: brightness(0) invert(0.7) sepia(1) saturate(5) hue-rotate(200deg);
+    cursor: pointer;
+  }
+  /* Nav */
+  .logo {
+    display: flex;
+    width: 180px;
+    height: auto;
+  }
+  
+  .h-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  nav {
+    background-color: rgba(243, 244, 246, 0.4);
+    color: white;
+    font-weight: bold;
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    margin-right: 2rem;
+    padding: 0.5rem 1rem;
+  }
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Estilo del menú oculto por defecto */
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Lista en nav */
+  nav ul {
+    display: flex;
+    gap: 0;
+    padding: 0.5rem;
+    list-style: none;
+  }
+  
+  /* Links */
+  nav ul li a {
+    display: block;
+    padding: 0.3rem 1rem;
+    border-radius: 9999px;
+    color: inherit;
+    text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Hover efecto */
+  nav ul li a:hover {
+    background-color: rgba(209, 213, 219, 0.3);
+    transition-duration: 700ms;
+  }
+
+  /* Footer */
+footer {
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  footer p {
+    margin-right: 2rem;
+  }
+  
+  @media (max-width: 1017px) {
+    /* Responsive Header, lo que me llevo hacer esto, no tenes una idea jaja*/
+    header {
+      padding: 0;
+    }
+    .redes-sociales-header{
+      justify-content: center;
+      margin:2rem 0 0 0;
+    }
+    .h-mobile {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    .menu-toggle {
+      display: block;
+      margin: 2rem 0 0 0;
+    }
+  
+    nav.menu {
+      display: none;
+      width: 100%;
+      border-radius: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    nav.menu.active {
+      display: block;
+      margin: 0;
+      padding: 0;
+      margin-bottom:2rem;
+    }
+  
+    nav.menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  
+    nav.menu ul li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav.menu ul li a {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      border-top: 2px solid rgba(255, 9, 9, 0.7);
+      border-bottom: 2px solid rgba(255, 9, 9, 0.7);
+      border-radius: 0;
+    }
+    /* Termino el estilo del header */
+    footer {
+      justify-content: center;
+    }
+    /* html,
+    body {
+      background-color: black;
+      background-image: none;
+    } */
+     
+  }

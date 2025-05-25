@@ -1,0 +1,109 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+.home-hero {
+  padding: 2rem 2em;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-hero .title {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.home-hero .main {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.6;
+
+  margin-bottom: 1rem;
+}
+.podcast-cta {
+  margin-top: 2rem;
+}
+.btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn:hover {
+  background-color: #ddd;
+  color: #000;
+}
+.programacion {
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  text-align: center;
+  color: #fff;
+  max-width: 1100px;
+}
+
+.programacion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.programacion .descripcion {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #ddd;
+}
+
+.grid-programa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.programa {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.programa img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #fff;
+}
+
+.programa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.programa h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.programa p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
