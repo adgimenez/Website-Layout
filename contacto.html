@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b5b3f49780.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Sin Filtros Project - Tú Podcast</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="redes-sociales-header">
+        <a
+          href="https://www.tiktok.com/@alesinfilros"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i
+            class="fa-brands fa-tiktok"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@SinFiltros-Project"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <i
+            class="fa-brands fa-youtube"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+        <a
+          href="https://www.instagram.com/auditore.ale"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i
+            class="fa-brands fa-instagram"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+        <a
+          href="https://www.twitch.tv/alesinfiltros"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitch"
+        >
+          <i
+            class="fa-brands fa-twitch"
+            style="color: #ffffff; font-size: x-large"
+          ></i>
+        </a>
+      </div>
+      <div class="h-mobile desktop">
+        <div class="logo-wrapper">
+          <a href="index.html"><img class="logo" src="./img/personal/logo-blanco.png" alt="Logo" /></a>
+        </div>
+        <button class="menu-toggle" id="menu-btn">&#9776;</button>
+<div class="menu-">
+        <nav class="menu" id="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quien-somos.html">¿Quienes Somos?</a></li>
+            <li><a href="episodios.html">Episodios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- BASE DEL HTML -->
+    </main>
+    <footer>
+      <p>Diseñado por Alejandro Gimenez Curso UTN 2025</p>
+    </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+
+      // Opcional: cerrar el menú al hacer clic en un link
+      document.querySelectorAll(".menu a").forEach((link) =>
+        link.addEventListener("click", () => {
+          menu.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>
