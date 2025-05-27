@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="contacto.css" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,8 +77,8 @@
         <nav class="menu" id="menu">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="quien-somos.html">¿Quienes Somos?</a></li>
             <li><a href="episodios.html">Episodios</a></li>
+            <li><a href="quien-somos.html">¿Quienes Somos?</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav></div>
@@ -86,6 +87,38 @@
 
     <main>
       <!-- BASE DEL HTML -->
+      <section class="contacto">
+        <h2>Contacto</h2>
+        <p class="descripcion">¿Querés sumarte, dejarnos un mensaje o proponer una idea? ¡Escribinos!</p>
+      
+        <div class="contenedor-contacto">
+      
+          <!-- Formulario a la izquierda -->
+          <form class="formulario-contacto">
+            <div class="fila">
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+              <input type="email" name="email" placeholder="Tu email" required>
+            </div>
+            <textarea name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+            <div class="boton-enviar">
+              <button type="submit">Enviar mensaje</button>
+            </div>
+            <p class="estado"></p>
+          </form>
+      
+          <!-- Info lateral a la derecha -->
+          <div class="info-contacto">
+            <h3>¿Querés participar?</h3>
+            <p>✉️ sinfiltrosproject@gmail.com</p>
+            <p>📍 Buenos Aires, Argentina</p>
+            <p>🎤 Si querés ser entrevistado, contanos un poco sobre vos y por qué te gustaría compartir tu historia.</p>
+          </div>
+      
+        </div>
+      </section>
+      
+        </div>
+      </section>
     </main>
     <footer>
       <p>Diseñado por Alejandro Gimenez Curso UTN 2025</p>

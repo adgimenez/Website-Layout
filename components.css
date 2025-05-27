@@ -127,7 +127,10 @@ nav ul li a:hover {
   transition-duration: 700ms;
 }
 main {
-  margin: 2rem 0 2rem 0;
+margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex:1;
 }
 
 /* Footer */
